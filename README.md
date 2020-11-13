@@ -17,6 +17,7 @@
 2.在校生，加深对学校的了解，接受爱国主义教育。  
 3.毕业生和校友，心系学校，直观感受学校变化。  
 4.社会人士，游览校园，体验高校自然和人文美景。  
+
 项目截图：
 ![image](https://www.et.ynu.edu.cn/appdd/uploads/20181020105/8/ph1.jpg)  
 ![image](https://www.et.ynu.edu.cn/appdd/uploads/20181020105/8/ph2.jpg)  
@@ -25,3 +26,22 @@
 ![image](https://www.et.ynu.edu.cn/appdd/uploads/20181020105/8/ph5.jpg)  
 ![image](https://www.et.ynu.edu.cn/appdd/uploads/20181020105/8/ph6.jpg)  
 
+体验二维码：
+![image](https://www.et.ynu.edu.cn/appdd/uploads/20181060009/8/%E4%BA%91%E6%B8%B8%E6%A0%A1%E5%9B%AD-%E4%BD%93%E9%AA%8C%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg) 
+
+部署教程：
+1.将项目下载到计算机；
+2.向云数据库中，添加以下集合：
+（1）donglu  存放东陆校区景点介绍与美图数据
+（2）chenggong  存放呈贡校区景点介绍与美图数据
+（3）history  存放云南大学历史介绍文章与图片
+（4）user  存放相册所需数据
+（5）gaokao2019  存放查询高考相关分数数据
+（6）college  存放学院介绍数据
+然后修改各个集合权限为最高权限（第一个选项）
+3.向云存储中添加文件夹images，文件夹中存放东陆与呈贡校区美图，命名与数据集合中相同。
+  向云存储中添加文件夹hisImgs，文件夹中存放历史图片，命名与history数据集合一致。
+4.修改page2.js，page22.js，detail.js，hisDetail.js从云数据库中获取图片数据的前缀为自己云存储的相关路径。
+5.进行测试。
+
+开源许可证标注：
